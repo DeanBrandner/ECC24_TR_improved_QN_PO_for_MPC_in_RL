@@ -1,0 +1,6 @@
+
+*.pyc
+
+Agent_Comparison/data/
+
+Agent_Comparison/figs/agent/
