@@ -12,13 +12,24 @@ welcome to this repository. You'll find here the code that was created to produc
 ## Instructions
 All our results are created using Python code (using Jupyter Notebooks).
 To run the code please follow these steps:
-1) Install the anaconda environment ``.environment.yml`` via
-   ``conda create --prefix ./.conda -m .environment.yml``
+1) Install the anaconda environment ``.environment.yml`` via 
+   ```
+   conda env create -f PATH/TO/.environment.yml
+   ```
 2) Activate the environment
-   ``conda activate ./.conda
-3) Clone the package ``RL_for_MPC`` from [here](https://github.com/DeanBrandner/RL_Tools_Project.git).
-4) Add the package to the conda environment
-   ``conda develop PATH/TO/RL_for_MPC``
+   ```
+   conda activate ECC24_TR_Improved_QN_PO_for_MPC_in_RL
+   ```
+3) Clone [this repository]( https://github.com/DeanBrandner/RL_Tools_for_MPC.git) from GitHub and checkout the correct version
+    ```
+    git clone https://github.com/DeanBrandner/RL_Tools_for_MPC.git PATH/TO/RL_Tools_for_MPC 
+	cd PATH/TO/RL_Tools_for_MPC
+	git checkout tags/v0.0.1
+	```
+5) Add the package to the ``conda`` environment
+   ```
+   conda develop PATH/TO/RL_for_MPC
+   ```
 
 The results from Figure 1 can be reproduced by first running the following four files in the folder ``Agent_Comparison``
 * ``training_GD_MPC.ipynb``

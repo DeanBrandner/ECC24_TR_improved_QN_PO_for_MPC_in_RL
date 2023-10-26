@@ -1,4 +1,4 @@
-name: env
+name: ECC24_TR_Improved_QN_PO_for_MPC_in_RL
 channels:
   - defaults
 dependencies:
@@ -91,8 +91,15 @@ dependencies:
       - wrapt==1.14.1
 
     # install locally with:
-    # conda env create --prefix ./.conda -f .environment.yml
+    # conda env create -f PATH/TO/.environment.yml
     
     # Activate environment with:
-    # conda activate ./.conda
-    # conda develop /PATH/TO/RL_Tools
+    # conda activate ECC24_TR_Improved_QN_PO_for_MPC_in_RL
+    
+    # Clone the following repository from GitHub and checkout the correct version
+    # git clone https://github.com/DeanBrandner/RL_Tools_for_MPC.git PATH/TO/RL_Tools_for_MPC
+    # cd PATH/TO/RL_Tools_for_MPC
+    # git checkout tags/v0.0.1
+    
+    # Add the repository to conda
+    # conda develop /PATH/TO/RL_Tools_for_MPC
