@@ -3,6 +3,7 @@ Accompanying repository for our work "Reinforced Model Predictive Control via Tr
 
 ## Abstract
 Model predictive control can control nonlinear systems under consideration of constraints optimally. The control performance depends on the model accuracy and the prediction horizon. Recent advances propose to use reinforcement learning applied to a parameterized model predictive controller to recover the optimal control performance even if an imperfect model or short prediction horizons are used. However, common reinforcement learning algorithms rely on first order updates, which only have a linear convergence rate and hence need an excessive amount of dynamic data, which is difficult to obtain for real-world applications. More elaborate algorithms like Quasi-Newton updates are intractable if common function approximators like neural networks are used due to the large number of parameters.
+
 In this work, we exploit the small amount of parameters, which typically arise when using parameterized model predictive controllers, in a trust-region constrained Quasi-Newton training algorithm for deterministic policy optimization in reinforcement learning with a superlinear convergence rate. We show that the second order sensitivity tensor of the optimal solution of the model predictive controller, which is required in the deterministic policy Hessian, can be calculated by the solution of a linear system of equations. We apply the proposed algorithm to a case study and illustrate how it improves the data efficiency and accuracy compared to other algorithms.
 
 ## About this repository
@@ -28,7 +29,7 @@ To run the code please follow these steps:
 	```
 5) Add the package to the ``conda`` environment
    ```
-   conda develop PATH/TO/RL_for_MPC
+   conda develop PATH/TO/RL_Tools_for_MPC
    ```
 
 The results from Figure 1 can be reproduced by first running the following four files in the folder ``Agent_Comparison``
