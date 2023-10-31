@@ -21,15 +21,15 @@ To run the code please follow these steps:
    ```
    conda activate ECC24_TR_Improved_QN_PO_for_MPC_in_RL
    ```
-3) Clone [this repository]( https://github.com/DeanBrandner/RL_Tools_for_MPC.git) from GitHub and checkout the correct version
+3) Clone [this repository](https://github.com/DeanBrandner/Reinforced_MPC.git) from GitHub and checkout the correct version
     ```
-    git clone https://github.com/DeanBrandner/RL_Tools_for_MPC.git PATH/TO/RL_Tools_for_MPC 
-	cd PATH/TO/RL_Tools_for_MPC
+    git clone https://github.com/DeanBrandner/Reinforced_MPC.git PATH/TO/Reinforced_MPC 
+	cd PATH/TO/Reinforced_MPC
 	git checkout tags/v0.0.1
 	```
 5) Add the package to the ``conda`` environment
    ```
-   conda develop PATH/TO/RL_Tools_for_MPC
+   conda develop PATH/TO/Reinforced_MPC
    ```
 
 The results from Figure 1 can be reproduced by first running the following four files in the folder ``Agent_Comparison``
