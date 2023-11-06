@@ -2,9 +2,15 @@
 Accompanying repository for our work "Reinforced Model Predictive Control via Trust-Region Improved Quasi-Newton Policy Optimization".
 
 ## Abstract
-Model predictive control can control nonlinear systems under consideration of constraints optimally. The control performance depends on the model accuracy and the prediction horizon. Recent advances propose to use reinforcement learning applied to a parameterized model predictive controller to recover the optimal control performance even if an imperfect model or short prediction horizons are used. However, common reinforcement learning algorithms rely on first order updates, which only have a linear convergence rate and hence need an excessive amount of dynamic data, which is difficult to obtain for real-world applications. More elaborate algorithms like Quasi-Newton updates are intractable if common function approximators like neural networks are used due to the large number of parameters.
+Model predictive control can deal with nonlinear systems under consideration of constraints optimally.
+The control performance depends on the model accuracy and the prediction horizon.
+Recent advances propose to use reinforcement learning applied to a parameterized model predictive controller to recover the optimal control performance even if an imperfect model or short prediction horizons are used.
+However, common reinforcement learning algorithms rely on first order updates, which only have a linear convergence rate and hence need an excessive amount of dynamic data.
+Higher order updates are typcially intractable if the policy is approximated with neural networks due to the large number of parameters.
 
-In this work, we exploit the small amount of parameters, which typically arise when using parameterized model predictive controllers, in a trust-region constrained Quasi-Newton training algorithm for deterministic policy optimization in reinforcement learning with a superlinear convergence rate. We show that the second order sensitivity tensor of the optimal solution of the model predictive controller, which is required in the deterministic policy Hessian, can be calculated by the solution of a linear system of equations. We apply the proposed algorithm to a case study and illustrate how it improves the data efficiency and accuracy compared to other algorithms.
+In this work, we use a parameterized model predictive controller as policy, and leverage the small amount of necessary parameters to propose a trust-region constrained Quasi-Newton training algorithm for policy optimization with a superlinear convergence rate
+We show that the required second order derivative information can be calculated by the solution of a linear systems of equations.
+A simulation study illustrates that the proposed training algorithm outperforms other algorithms in data efficiency and accuracy.
 
 ## About this repository
 Dear reader,
